@@ -62,7 +62,11 @@ draw.rectangle((0,0,width,height), outline=0, fill=0)
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype('Mario-Kart-DS.ttf', 16)
 
+timg = Image.open('teapot_image.png').resize((disp.width, disp.height), Image.ANTIALIAS).convert('1')
 while True:
+	disp.image(timg)
+	disp.display()
+	time.sleep(3)
 	for msg in (
 		'Hello\nJudges!',
 		'Fancy a\nhobnob?',
